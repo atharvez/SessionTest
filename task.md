@@ -1,0 +1,23 @@
+# Tasks: QR-Based Player Testing System MVP
+
+- `[x]` 1. Initialize project structure
+- `[x]` 2. Database Setup
+  - `[x]` 2.1 Create `db/schema.sql` (Raw PostgreSQL schema and RLS)
+- `[/]` 3. Backend (FastAPI) Setup
+  - `[x]` 3.1 Create `backend/requirements.txt`
+  - `[x]` 3.2 Implement Core & DB Connection (`backend/app/db/`, `backend/main.py`)
+  - `[x]` 3.3 Implement Pydantic Schemas (`backend/app/schemas/`)
+  - `[x]` 3.4 Implement Authentication & Middleware (`backend/app/services/auth.py`, `backend/app/middleware/`)
+  - `[x]` 3.5 Implement Core Services (QR, Session, Player logic)
+  - `[x]` 3.6 Implement Routes (`auth.py`, `player.py`, `qr.py`, `test.py`, `admin.py`)
+- `[/]` 4. Frontend (React Native + Expo) Setup
+  - `[x]` 4.1 Scaffold Expo App & Dependencies
+  - `[x]` 4.2 Set up Zustand Store & API Axios Interceptors
+  - `[x]` 4.3 Set up Navigation (Role-based Stack & Tabs)
+  - `[x]` 4.4 Build Shared Components (Cards, Buttons, Inputs, Loaders)
+  - `[x]` 4.5 Build Auth Screens
+  - `[x]` 4.6 Build Player Screens (Profile, QR Display, History with Victory React)
+  - `[x]` 4.7 Build Admin Screens (Dashboard, QR Scanner, Session Monitor)
+- `[/]` 5. DevOps & Documentation
+  - `[x]` 5.1 Create `README.md` and Setup Instructions
+  - `[x]` 5.2 Create Docker setup for backend
