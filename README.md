@@ -1,184 +1,37 @@
-# QR Player Testing MVP
+﻿# SessionTest ðŸ§ª
 
-A full-stack MVP for QR-based player testing, identity verification, and role-based management.
+A full-stack TypeScript application for testing and validating session-based authentication flows.
 
-## 🚀 Tech Stack
+## Overview
 
-### Backend
+SessionTest provides a comprehensive environment to test user sessions, token expiry, concurrent sessions, and edge cases in auth workflows.
 
-* FastAPI (Python)
-* PostgreSQL
-* SQLAlchemy
-* JWT Authentication
+## Tech Stack
 
-### Frontend
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Next.js 15, TypeScript, Tailwind CSS |
+| Auth | NextAuth.js / custom session handling |
+| Testing | Jest, Playwright |
 
-* React Native (Expo)
-* TypeScript
-* Zustand
-* React Navigation
-* Axios
-* Victory Native (Charts)
+## Features
 
----
+- ðŸ” **Session Management** â€” Create, refresh, and invalidate sessions
+- â±ï¸ **Expiry Testing** â€” Test token expiration scenarios
+- ðŸ‘¥ **Concurrent Sessions** â€” Handle multiple active sessions
+- ðŸ›¡ï¸ **Security Scenarios** â€” CSRF, replay attack testing
+- ðŸ“Š **Session Analytics** â€” Track active sessions
 
-# 📁 Project Structure
-
-```bash
-/backend   # FastAPI backend and database models
-/frontend  # React Native Expo application
-/db        # Database schema and initialization scripts
-```
-
----
-
-# ⚙️ Setup Guide
-
-## 1. Database Setup
-
-We recommend using Supabase for PostgreSQL hosting.
-
-### Steps
-
-1. Create a new project in Supabase.
-2. Open the SQL Editor.
-3. Run the SQL script located at:
+## Getting Started
 
 ```bash
-db/schema.sql
-```
-
-4. Copy your PostgreSQL connection string:
-
-```bash
-postgresql://postgres:[PASSWORD]@db.[PROJECT_ID].supabase.co:5432/postgres
-```
-
----
-
-## 2. Backend Setup
-
-Navigate to the backend directory:
-
-```bash
-cd backend
-```
-
-### Configure Environment Variables
-
-Copy the example environment file:
-
-```bash
-cp .env.example .env
-```
-
-Update the `.env` file with your configuration values, especially:
-
-```env
-DATABASE_URL=your_supabase_connection_string
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Run the Development Server
-
-```bash
-uvicorn main:app --reload
-```
-
-Backend API will be available at:
-
-```bash
-http://localhost:8000
-```
-
-Swagger documentation:
-
-```bash
-http://localhost:8000/docs
-```
-
----
-
-## 3. Frontend Setup
-
-Navigate to the frontend directory:
-
-```bash
-cd frontend
-```
-
-### Install Dependencies
-
-```bash
+git clone https://github.com/atharvez/SessionTest.git
+cd SessionTest
 npm install
+cp .env.example .env.local
+npm run dev
 ```
 
-### Configure API Base URL
+## License
 
-Update the `BASE_URL` inside:
-
-```bash
-src/api/axios.ts
-```
-
-This is required if:
-
-* Your backend runs on another machine
-* You're testing on a physical device
-
-### Start Expo Development Server
-
-```bash
-npx expo start
-```
-
----
-
-# 👤 Admin Role Access
-
-Newly registered users are assigned the `player` role by default.
-
-To access admin-only features:
-
-1. Open the Supabase Dashboard
-2. Navigate to the `users` table
-3. Change your account role from:
-
-```text
-player → admin
-```
-
----
-
-# 🐳 Docker Deployment
-
-## Build Docker Image
-
-```bash
-docker build -t qr-backend ./backend
-```
-
-## Run with Docker Compose
-
-```bash
-docker-compose up -d
-```
-
----
-
-# 📌 Features
-
-* QR-based player identification
-* JWT authentication
-* Role-based access control
-* Admin dashboard support
-* PostgreSQL + Supabase integration
-* Mobile-first React Native app
-* REST API with Swagger documentation
-
----
+MIT Â© [Atharva Desai](https://github.com/atharvez)
