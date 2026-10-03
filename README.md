@@ -1,10 +1,10 @@
-﻿# SessionTest ðŸ§ª
+# SessionTest
 
 A full-stack TypeScript application for testing and validating session-based authentication flows.
 
 ## Overview
 
-SessionTest provides a comprehensive environment to test user sessions, token expiry, concurrent sessions, and edge cases in auth workflows.
+Provides a comprehensive environment to test user sessions, token expiry, concurrent sessions, and edge cases in auth workflows.
 
 ## Tech Stack
 
@@ -16,11 +16,11 @@ SessionTest provides a comprehensive environment to test user sessions, token ex
 
 ## Features
 
-- ðŸ” **Session Management** â€” Create, refresh, and invalidate sessions
-- â±ï¸ **Expiry Testing** â€” Test token expiration scenarios
-- ðŸ‘¥ **Concurrent Sessions** â€” Handle multiple active sessions
-- ðŸ›¡ï¸ **Security Scenarios** â€” CSRF, replay attack testing
-- ðŸ“Š **Session Analytics** â€” Track active sessions
+- Session management -- create, refresh, and invalidate sessions
+- Expiry testing -- test token expiration scenarios
+- Concurrent sessions -- handle multiple active sessions
+- Security scenarios -- CSRF, replay attack testing
+- Session analytics -- track active sessions
 
 ## Getting Started
 
@@ -34,4 +34,4 @@ npm run dev
 
 ## License
 
-MIT Â© [Atharva Desai](https://github.com/atharvez)
+MIT (c) Atharva Desai
